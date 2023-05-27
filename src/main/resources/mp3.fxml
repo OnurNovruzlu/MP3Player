@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="136.0" style="-fx-background-color: linear-gradient(red,yellow)" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coftea.mp3.MP3Controller">
+    <Label fx:id="mediaLabel" alignment="CENTER" layoutX="260.0" layoutY="6.0" text="Media.name" textFill="black" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <font>
+          <Font size="46.0" />
+        </font>
+    </Label>
+    <ProgressBar fx:id="mediaProgressBar" layoutY="68.0" onMouseClicked="#changeDurationMedia" prefHeight="18.0" prefWidth="600.0" progress="0.0" style="-fx-accent: red;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0" />
+    <Button fx:id="playButton" style="-fx-background-color: linear-gradient(orangered,yellow);" layoutY="86.0" mnemonicParsing="false" onAction="#play" prefHeight="50.0" prefWidth="70.0" text="PLAY" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+    <Button fx:id="pauseButton" style="-fx-background-color: linear-gradient(orangered,yellow)"  layoutX="70.0" layoutY="85.0" mnemonicParsing="false" onAction="#pause" prefHeight="50.0" prefWidth="70.0" text="PAUSE" AnchorPane.bottomAnchor="0.0" />
+    <Button fx:id="resetButton" style="-fx-background-color: linear-gradient(orangered,yellow)"  layoutX="140.0" layoutY="85.0" mnemonicParsing="false" onAction="#reset" prefHeight="50.0" prefWidth="70.0" text="RESET" AnchorPane.bottomAnchor="0.0" />
+    <Button fx:id="previousButton" style="-fx-background-color: linear-gradient(orangered,yellow)"  layoutX="210.0" layoutY="85.0" mnemonicParsing="false" onAction="#previous" prefHeight="50.0" prefWidth="70.0" text="PREVIOUS" AnchorPane.bottomAnchor="0.0" />
+    <Button fx:id="nextButton" style="-fx-background-color: linear-gradient(orangered,yellow)"  layoutX="280.0" layoutY="85.0" mnemonicParsing="false" onAction="#nextMedia" prefHeight="50.0" prefWidth="70.0" text="NEXT" AnchorPane.bottomAnchor="0.0" />
+    <Slider fx:id="volumeSlider" style="-fx-background-color: linear-gradient(orangered,yellow)"  cache="true" layoutX="456.0" layoutY="104.0" prefHeight="14.0" prefWidth="149.0" value="50.0" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="-5.0" />
+   <ComboBox fx:id="speedComboBox" style="-fx-background-color: linear-gradient(orangered,yellow)"  layoutX="350.0" layoutY="86.0" onAction="#changeSpeed" prefHeight="50.0" prefWidth="103.0" promptText="SPEED" AnchorPane.bottomAnchor="-0.0" />
+</AnchorPane>
